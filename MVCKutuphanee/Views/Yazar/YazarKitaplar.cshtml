@@ -1,0 +1,30 @@
+﻿@using MVCKutuphanee.Models.Entity;
+@model List<TBLKITAP>
+@{
+    ViewBag.Title = "YazarKitaplar";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<title>Yazarın Kitapları</title>
+<h2>@ViewBag.y1 Kitapları</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Kitap Adı</th>
+        <th>Kategori</th>
+        <th>Yayınevi</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.TBLKATEGORI.ADI</td>
+            <td>@x.YAYINEVI</td>
+        </tr>
+    }
+
+
+
+</table>
+
